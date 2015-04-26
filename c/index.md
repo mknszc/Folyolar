@@ -57,7 +57,6 @@ Nisan 2015
 #   GNU Style
 
 -   `Richard Stellman` tarafından popülerleştirilmiştir
--   Allman ve Whitesmiths stilleri gibidir
 -   GNU projesinde kullanılmaktadır
 
 	`gnu.c`
@@ -72,7 +71,7 @@ Nisan 2015
 -   Linux çekirdeğinin kaynak kodllarında kullanıldığı bilinir
 
 -   `Linus Torvads` 'ın  takipçilerine önerdiği bir stildir
-#   Girinti-Boşluk
+#   Girinti - Boşluk
 
 -   Sekmeler `8 karakter` dolayısıyla girintilerde 8 karakter vardır
 -   Faydası okunurluğu artırır ve uyarıları daha iyi görmeyi sağlar
@@ -92,13 +91,13 @@ Nisan 2015
 
 	.code: code/method.c
 
-#   Switch-Case
+#   Switch - Case
 
 -   `switch` ve `case` aynı hizda içeriği ise `8` karakter içeride
 
 	.code: code/switch.c
 
-#    if-else ...
+#    if - else ...
 
 -    `İf-else`, `for`,`while` gibi kısımlarda süslü parantez  kısmın açıldığı yere konur
 -    Kapatılırken de açıldığı yer ile aynı hizada olmalı 
@@ -142,14 +141,94 @@ Nisan 2015
 
 #   Kernel Normal Form Style
 
-#   Kernel Normal Form Style
+#   KNF
 
--   BSD işletim sistemlerinin kodlama standardı
--   K&R'ın unix kodunda kullandıkları stil ve notasyondan türetilmiş
+-   `BSD işletim sistemlerinin` kodlama standardı
+-   `K&R`'ın unix kodunda kullandıkları stil ve notasyondan türetilmiş
 
-#   tanım
-   
-#   
+#  KNF 
+
+-   Prototipler değişken isimleri ile ilişkili olmamalıdır
+
+
+	doğru -->  `void fonksiyon (int);`
+
+	yanlış --> `void fonksiyon (int a);`
+
+-   Prototiplerde fonksiyon isimlerini hizalamak için bir tabtan sonra ekstra boşluk olabilir
+
+	`static char	*function(int, const char *);`
+ 
+	`static void	 usage(void);`
+
+
+#   KNF
+
+-   Fonksiyon adı ve bağımsız değişken listesi arasında boşluk olmamalıdır
+
+-   Numaralandırma değerlerinin tümü büyük harfle yazılır
+
+	`enum enumtype { ONE, TWO } et;`
+
+-   struct içinde değişken bildiriminde sıralama yapılmalı
+
+	`büyükten -küçüğe / alfabetik`
+
+#  KNF 
+
+-   Kontrolden sonra tek bir satır varsa `{` kullanılmayabilir
+	
+	.code: code/lo.c	
+
+-  Döngü içinde boş kısımlar olabilir 
+
+	.code: code/foo.c
+
+#   Vim Editöründe Stil Ayarı
+
+#   Linux Coding Style Ayarı
+
+-   Başlangış dizinindeyken
+	
+	
+		!sh
+	
+		$ cd .vim/
+
+-   plugin adında bir dizin oluşturup
+
+-   [adres](http://www.vim.org/scripts/script.php?script_id=4369)'ten `linuxsty.vim` dosyasını edin 
+
+-   plugin içine bu dosyayı entegre et
+
+
+#  içerik
+
+-     
+	.code: code/style.vim
+ 
+
+#   Ekstra
+
+-   Başlangıç dizinindeyken 
+
+		!sh
+
+		cd /usr/share/vim
+
+-   vimrc dosyasına ekleyerek de yapılabilir
+
+-   Kernel Normal Form için ilgili formata ulaşılıp ekleme yapılır
+
+#Uygulama
+
+	
+
+
+
+
+
+
 
 
 
