@@ -1,4 +1,4 @@
-#   C Style
+#   C Kodlama Stilleri
 
 .fx: first
 
