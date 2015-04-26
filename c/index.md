@@ -218,7 +218,9 @@ Nisan 2015
 
 -   vimrc dosyasına ekleyerek de yapılabilir
 
--   Kernel Normal Form için ilgili formata ulaşılıp ekleme yapılır
+-   Kernel Normal Form için 
+
+	.code: code/vimrc
 
 #Uygulama
 
